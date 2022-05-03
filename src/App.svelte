@@ -1,34 +1,30 @@
+<script>
+	export let name;
+</script>
+
+<main>
+	<h1>Hello {name}!</h1>
+	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+</main>
+
 <style>
-  :global {
-    @import 'src/styles/global.scss';
-  }
+	main {
+		text-align: center;
+		padding: 1em;
+		max-width: 240px;
+		margin: 0 auto;
+	}
+
+	h1 {
+		color: #ff3e00;
+		text-transform: uppercase;
+		font-size: 4em;
+		font-weight: 100;
+	}
+
+	@media (min-width: 640px) {
+		main {
+			max-width: none;
+		}
+	}
 </style>
-
-<h1 class="title">
-  Bulma
-</h1>
-
-<p class="subtitle">
-  Modern CSS framework based on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Flexbox</a>
-</p>
-
-<div class="field">
-  <div class="control">
-    <input class="input" type="text" placeholder="Input">
-  </div>
-</div>
-
-<div class="field">
-  <p class="control">
-    <span class="select">
-      <select>
-        <option>Select dropdown</option>
-      </select>
-    </span>
-  </p>
-</div>
-
-<div class="buttons">
-  <a class="button is-primary">Primary</a>
-  <a class="button is-link">Link</a>
-</div>
